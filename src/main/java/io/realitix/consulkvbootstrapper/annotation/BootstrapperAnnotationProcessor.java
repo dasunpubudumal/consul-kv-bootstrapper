@@ -20,7 +20,7 @@ import java.util.regex.Pattern;
 
 @Aspect
 @Component
-public class AnnotationProcessor {
+public class BootstrapperAnnotationProcessor {
 
     private final ObjectMapper mapper = new ObjectMapper(new YAMLFactory());
     private ConsulClient consulClient;
@@ -33,7 +33,7 @@ public class AnnotationProcessor {
 
 
     @Around("pointcut()")
-    public Object beforeBootstrapperMethod(ProceedingJoinPoint joinPoint) throws Throwable {
+    public void beforeBootstrapperMethod(ProceedingJoinPoint joinPoint) throws Throwable {
         final MethodSignature signature = (MethodSignature) joinPoint.getSignature();
         Method method = signature.getMethod();
         ConsulKVBootstrapper annotation = method.getAnnotation(ConsulKVBootstrapper.class);
@@ -43,7 +43,6 @@ public class AnnotationProcessor {
                 .readValue(new FileReader(processFilePath), BootstrapperConfig.class);
         Properties properties = setUpAsEnvironmentVariables(bootstrapperConfig);
         joinPoint.proceed(new Object[]{properties});
-        return properties;
     }
 
     private String processFilePath( String filePath ) {
