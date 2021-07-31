@@ -10,7 +10,7 @@ public static class TestConfig {
     @Autowired
     static Properties properties;
 
-    @BootstrapperMethod(configFilePath = "src/test/resources/consul-config.yml")
+    @ConsulKVBootstrapper(configFilePath = "src/test/resources/consul-config.yml")
     @Bean
     Properties properties( Properties properties )
     {
@@ -27,7 +27,7 @@ public static class TestConfig {
 If it is required to set up the `consul-config.yml` file in JVM environment variables, make sure you indicate the `configFilePath` parameter as follows:
 
 ```java
-@BootstrapperMethod(configFilePath = "{FILE_PATH}")
+@ConsulKVBootstrapper(configFilePath = "{FILE_PATH}")
 ```
 
 `FILE_PATH` you need to add to the JVM environments.
