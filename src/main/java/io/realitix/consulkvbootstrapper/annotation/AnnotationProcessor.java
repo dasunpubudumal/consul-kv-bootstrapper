@@ -16,6 +16,8 @@ import java.io.FileReader;
 import java.lang.reflect.Method;
 import java.util.Properties;
 import java.util.logging.Logger;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 @Aspect
 @Component
@@ -41,10 +43,20 @@ public class AnnotationProcessor {
         BootstrapperMethod annotation = method.getAnnotation(BootstrapperMethod.class);
         String configFilePath = annotation.configFilePath();
         BootstrapperConfig bootstrapperConfig = mapper
-                .readValue(new FileReader(configFilePath), BootstrapperConfig.class);
+                .readValue(new FileReader(processFilePath(configFilePath)), BootstrapperConfig.class);
         Properties properties = setUpAsEnvironmentVariables(bootstrapperConfig);
         joinPoint.proceed(new Object[]{properties});
         return properties;
+    }
+
+    private String processFilePath( String filePath ) {
+        Pattern compile = Pattern.compile("\\$\\{(.*?)\\\\}", Pattern.CASE_INSENSITIVE);
+        Matcher matcher = compile.matcher( filePath );
+        if (matcher.find()) {
+            return System.getenv(matcher.group(1));
+        } else {
+            return filePath;
+        }
     }
 
     private Properties setUpAsEnvironmentVariables( BootstrapperConfig config ) {
