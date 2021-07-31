@@ -42,18 +42,19 @@ public class AnnotationProcessor {
         Method method = signature.getMethod();
         BootstrapperMethod annotation = method.getAnnotation(BootstrapperMethod.class);
         String configFilePath = annotation.configFilePath();
+        String processFilePath = processFilePath(configFilePath);
         BootstrapperConfig bootstrapperConfig = mapper
-                .readValue(new FileReader(processFilePath(configFilePath)), BootstrapperConfig.class);
+                .readValue(new FileReader(processFilePath), BootstrapperConfig.class);
         Properties properties = setUpAsEnvironmentVariables(bootstrapperConfig);
         joinPoint.proceed(new Object[]{properties});
         return properties;
     }
 
     private String processFilePath( String filePath ) {
-        Pattern compile = Pattern.compile("\\$\\{(.*?)\\\\}", Pattern.CASE_INSENSITIVE);
+        Pattern compile = Pattern.compile("\\{(.*?)\\}", Pattern.CASE_INSENSITIVE);
         Matcher matcher = compile.matcher( filePath );
         if (matcher.find()) {
-            return System.getenv(matcher.group(1));
+            return System.getenv(filePath.replace("{", "").replace("}", ""));
         } else {
             return filePath;
         }

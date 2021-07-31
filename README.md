@@ -24,6 +24,14 @@ public static class TestConfig {
 }
 ```
 
+If it is required to set up the `consul-config.yml` file in JVM environment variables, make sure you indicate the `configFilePath` parameter as follows:
+
+```java
+@BootstrapperMethod(configFilePath = "{FILE_PATH}")
+```
+
+`FILE_PATH` you need to add to the JVM environments.
+
 Configuration file:
 
 ```yaml
