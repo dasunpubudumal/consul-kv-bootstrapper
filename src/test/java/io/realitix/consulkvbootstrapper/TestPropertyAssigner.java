@@ -17,13 +17,17 @@ import java.util.Properties;
 @AutoConfigureMockMvc
 public class TestPropertyAssigner {
 
+    static {
+        System.setProperty("FILE_PATH", "src/test/resources/consul-config.yml");
+    }
+
     @Configuration
     public static class TestConfig {
 
         @Autowired
         static Properties properties;
 
-        @BootstrapperMethod(configFilePath = "src/test/resources/consul-config.yml")
+        @BootstrapperMethod(configFilePath = "{FILE_PATH}")
         @Bean
         Properties properties( Properties properties )
         {
