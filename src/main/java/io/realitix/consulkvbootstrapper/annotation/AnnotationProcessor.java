@@ -36,8 +36,6 @@ public class AnnotationProcessor {
 
     @Around("pointcut()")
     public Object beforeBootstrapperMethod(ProceedingJoinPoint joinPoint) throws Throwable {
-        System.out.println("Hello");
-        logger.info("Initializing Consul Bootstrapper utility..");
         final MethodSignature signature = (MethodSignature) joinPoint.getSignature();
         Method method = signature.getMethod();
         BootstrapperMethod annotation = method.getAnnotation(BootstrapperMethod.class);
