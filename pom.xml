@@ -10,7 +10,7 @@
     </parent>
     <groupId>io.realitix</groupId>
     <artifactId>consul-kv-bootstrapper</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>1.0.0-alpha</version>
     <name>consul-kv-bootstrapper</name>
     <description>Demo project for Spring Boot</description>
     <properties>
