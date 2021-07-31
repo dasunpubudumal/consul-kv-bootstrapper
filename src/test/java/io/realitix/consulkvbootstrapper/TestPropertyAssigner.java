@@ -2,6 +2,7 @@ package io.realitix.consulkvbootstrapper;
 
 import io.realitix.consulkvbootstrapper.annotation.BootstrapperMethod;
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -35,6 +36,7 @@ public class TestPropertyAssigner {
         }
     }
 
+    @Disabled
     @Test
     public void testProperties()
     {

@@ -1,8 +1,7 @@
-package io.realitix.consulkvbootstrapper;
+package io.realitix.consulkvbootstrapper.connector;
 
 import com.google.common.net.HostAndPort;
 import com.orbitz.consul.Consul;
-import io.realitix.consulkvbootstrapper.connector.ConsulClient;
 
 public class ConsulConnectorFactory {
 

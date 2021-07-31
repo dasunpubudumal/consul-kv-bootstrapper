@@ -2,23 +2,18 @@ package io.realitix.consulkvbootstrapper.annotation;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.dataformat.yaml.YAMLFactory;
-import io.realitix.consulkvbootstrapper.ConsulConnectorFactory;
+import io.realitix.consulkvbootstrapper.connector.ConsulConnectorFactory;
 import io.realitix.consulkvbootstrapper.config.BootstrapperConfig;
 import io.realitix.consulkvbootstrapper.connector.ConsulClient;
-import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
-import org.aspectj.lang.annotation.Before;
 import org.aspectj.lang.annotation.Pointcut;
 import org.aspectj.lang.reflect.MethodSignature;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Component;
 
 import java.io.FileReader;
 import java.lang.reflect.Method;
-import java.util.List;
 import java.util.Properties;
 import java.util.logging.Logger;
 
