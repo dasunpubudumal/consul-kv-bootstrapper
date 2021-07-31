@@ -10,28 +10,12 @@ public class BootstrapperConfig {
     private int consulPort;
     private List<String> configurations;
 
-    public List<String> getConfigurations() {
-        return configurations;
-    }
-
-    public void setConfigurations(List<String> configurations) {
-        this.configurations = configurations;
-    }
-
     public String getConsulHost() {
         return consulHost;
     }
 
     public void setConsulHost(String consulHost) {
         this.consulHost = consulHost;
-    }
-
-    public int getConsulPort() {
-        return consulPort;
-    }
-
-    public void setConsulPort(int consulPort) {
-        this.consulPort = consulPort;
     }
 
     public String getServiceName() {
@@ -48,5 +32,21 @@ public class BootstrapperConfig {
 
     public void setServiceId(String serviceId) {
         this.serviceId = serviceId;
+    }
+
+    public int getConsulPort() {
+        return consulPort;
+    }
+
+    public void setConsulPort(int consulPort) {
+        this.consulPort = consulPort;
+    }
+
+    public List<String> getConfigurations() {
+        return configurations;
+    }
+
+    public void setConfigurations(List<String> configurations) {
+        this.configurations = configurations;
     }
 }

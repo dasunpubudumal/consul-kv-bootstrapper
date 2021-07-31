@@ -6,7 +6,7 @@ import com.orbitz.consul.KeyValueClient;
 import com.orbitz.consul.NotRegisteredException;
 import com.orbitz.consul.model.agent.ImmutableRegistration;
 import com.orbitz.consul.model.agent.Registration;
-import io.realitix.exception.ConsulClientException;
+import io.realitix.consulkvbootstrapper.exception.ConsulClientException;
 
 import java.util.Collections;
 import java.util.HashMap;
