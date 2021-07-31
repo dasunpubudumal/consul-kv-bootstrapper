@@ -1,5 +1,10 @@
 # Consul KV Bootstrapper
 
+Applications use different variables (e.g. connector hosts, ports, application-specific environment values)
+for the tasks they accomplish. Most applications require these parameters at startup, where the application is
+initialized with the configurations as global constants which are used at runtime. Consul KV is such a Key-Value store
+for storing said configurations.
+
 This application is a utility application to bootstrap application configurations held 
 in Consul KV upon client application initialization. Upon initialization of a Spring Bean (`@Bean, @Component`, etc.) use `@BootstrapperMethod` to return properties declared in a `consul-config.yml` file. 
 
