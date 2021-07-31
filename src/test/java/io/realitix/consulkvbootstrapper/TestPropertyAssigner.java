@@ -31,7 +31,7 @@ public class TestPropertyAssigner {
         @Bean
         Properties properties( Properties properties )
         {
-            this.properties = properties;
+            TestConfig.properties = properties;
             return properties;
         }
 
