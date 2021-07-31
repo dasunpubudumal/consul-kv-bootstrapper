@@ -63,9 +63,13 @@ public class BootstrapperAnnotationProcessor {
                 config.getServiceId(),
                 config.getServiceName()
         );
-        consulClient
-                .getValues(config.getConfigurations())
-                .forEach(properties::put);
+        if (config.getConfigurations() == null) {
+            consulClient.getValues().forEach(properties::put);
+        } else {
+            consulClient
+                    .getValues(config.getConfigurations())
+                    .forEach(properties::put);
+        }
         return properties;
     }
 

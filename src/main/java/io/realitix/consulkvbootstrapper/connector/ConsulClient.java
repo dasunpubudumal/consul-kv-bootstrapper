@@ -56,6 +56,15 @@ public class ConsulClient {
         });
     }
 
+    public Map<String, String> getValues()
+    {
+        Map<String, String> output = new HashMap<>();
+        keyValueClient.getValues("").forEach(value -> {
+            value.getValueAsString().ifPresent(v -> output.put(v, value.getKey()));
+        });
+        return output;
+    }
+
     public String getValue(String key)
     {
         return keyValueClient.getValue(key)
