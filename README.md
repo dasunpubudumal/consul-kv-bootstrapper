@@ -36,3 +36,5 @@ configurations:
   - TEST_KEY_2
 
 ```
+
+**Note**: Please add a `@ComponentScan` as `@ComponentScan(basePackages = {"io.realitix.*", "<your base packages>.*"})` in your main `SpringBootApplication` so that the dependency components will get scanned. 
