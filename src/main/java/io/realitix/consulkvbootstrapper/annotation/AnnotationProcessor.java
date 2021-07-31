@@ -24,7 +24,6 @@ import java.util.regex.Pattern;
 public class AnnotationProcessor {
 
     private final ObjectMapper mapper = new ObjectMapper(new YAMLFactory());
-    private final Logger logger = Logger.getAnonymousLogger();
     private ConsulClient consulClient;
 
     @Pointcut("@annotation(BootstrapperMethod)")
