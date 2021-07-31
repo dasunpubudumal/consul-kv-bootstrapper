@@ -4,7 +4,7 @@ import java.lang.annotation.*;
 
 @Target(ElementType.METHOD)
 @Retention(RetentionPolicy.RUNTIME)
-public @interface BootstrapperMethod {
+public @interface ConsulKVBootstrapper {
 
     String configFilePath() default "consul-config.yml";
 

@@ -1,6 +1,6 @@
 package io.realitix.consulkvbootstrapper;
 
-import io.realitix.consulkvbootstrapper.annotation.BootstrapperMethod;
+import io.realitix.consulkvbootstrapper.annotation.ConsulKVBootstrapper;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
@@ -27,7 +27,7 @@ public class TestPropertyAssigner {
         @Autowired
         static Properties properties;
 
-        @BootstrapperMethod(configFilePath = "{FILE_PATH}")
+        @ConsulKVBootstrapper(configFilePath = "{FILE_PATH}")
         @Bean
         Properties properties( Properties properties )
         {

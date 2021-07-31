@@ -15,7 +15,6 @@ import org.springframework.stereotype.Component;
 import java.io.FileReader;
 import java.lang.reflect.Method;
 import java.util.Properties;
-import java.util.logging.Logger;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -26,7 +25,7 @@ public class AnnotationProcessor {
     private final ObjectMapper mapper = new ObjectMapper(new YAMLFactory());
     private ConsulClient consulClient;
 
-    @Pointcut("@annotation(BootstrapperMethod)")
+    @Pointcut("@annotation(io.realitix.consulkvbootstrapper.annotation.ConsulKVBootstrapper)")
     public void pointcut()
     {
 
@@ -37,7 +36,7 @@ public class AnnotationProcessor {
     public Object beforeBootstrapperMethod(ProceedingJoinPoint joinPoint) throws Throwable {
         final MethodSignature signature = (MethodSignature) joinPoint.getSignature();
         Method method = signature.getMethod();
-        BootstrapperMethod annotation = method.getAnnotation(BootstrapperMethod.class);
+        ConsulKVBootstrapper annotation = method.getAnnotation(ConsulKVBootstrapper.class);
         String configFilePath = annotation.configFilePath();
         String processFilePath = processFilePath(configFilePath);
         BootstrapperConfig bootstrapperConfig = mapper
