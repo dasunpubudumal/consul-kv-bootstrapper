@@ -63,3 +63,23 @@ configurations:
 If it is required to fetch all configurations, remove `configurations` node from the `yml`.
 
 **Note**: Please add `io.realitix.*` in `@ComponentScan` as `@ComponentScan(basePackages = {"io.realitix.*", "<your base packages>.*"})` in your main `SpringBootApplication` so that the dependency components will get scanned. 
+
+## Maven Dependency
+
+```xml
+<dependency>
+    <groupId>io.realitix</groupId>
+    <artifactId>consul-kv-bootstrapper</artifactId>
+    <version>1.4.0-alpha</version>
+</dependency>
+```
+
+Add following to `<repositories>`.
+
+```xml
+        <repository>
+            <id>github</id>
+            <name>GitHub Packages</name>
+            <url>https://maven.pkg.github.com/dasunpubudumal/consul-kv-bootstrapper</url>
+        </repository>
+```
