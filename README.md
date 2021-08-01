@@ -69,7 +69,7 @@ If it is required to fetch all configurations, remove `configurations` node from
 <dependency>
     <groupId>com.github.dasunpubudumal</groupId>
     <artifactId>consul-kv-bootstrapper</artifactId>
-    <version>v1.4</version>
+    <version>1.0.0</version>
 </dependency>
 ```
 
