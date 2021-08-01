@@ -19,20 +19,18 @@ public class ConsulClient {
     private final Consul client;
     private final AgentClient agentClient;
     private final KeyValueClient keyValueClient;
-    private final Logger logger;
 
     public ConsulClient(Consul client, String serviceId, String serviceName) {
         this.client = client;
         this.agentClient = this.client.agentClient();
         this.keyValueClient = this.client.keyValueClient();
-        this.logger = Logger.getAnonymousLogger();;
         try {
             initialize(
                     serviceId,
                     serviceName
             );
         } catch (NotRegisteredException e) {
-            logger.severe(e.getMessage());
+            throw new ConsulClientException(e);
         }
 
     }
