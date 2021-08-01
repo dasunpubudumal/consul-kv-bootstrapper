@@ -77,9 +77,9 @@ If it is required to fetch all configurations, remove `configurations` node from
 Add following to `<repositories>`.
 
 ```xml
-        <repository>
-            <id>github</id>
-            <name>GitHub Packages</name>
-            <url>https://maven.pkg.github.com/dasunpubudumal/consul-kv-bootstrapper</url>
-        </repository>
+<repository>
+    <id>github</id>
+    <name>GitHub Packages</name>
+    <url>https://maven.pkg.github.com/dasunpubudumal/consul-kv-bootstrapper</url>
+</repository>
 ```
