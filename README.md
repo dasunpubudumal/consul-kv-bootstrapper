@@ -1,4 +1,4 @@
-# Consul KV Bootstrapper
+# Consul KV Configuration Bootstrapper
 
 Applications use different variables (e.g. connector hosts, ports, application-specific environment values)
 for the tasks they accomplish. Most applications require these parameters at startup, where the application is
