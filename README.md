@@ -56,7 +56,6 @@ serviceId: 1
 serviceName: example
 configurations:
   - TEST_KEY_1
-  - TEST_KEY_2
 
 ```
 
