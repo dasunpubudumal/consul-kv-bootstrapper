@@ -2,6 +2,16 @@
 
 [![Java CI with Maven](https://github.com/dasunpubudumal/consul-kv-bootstrapper/actions/workflows/maven.yml/badge.svg?branch=master)](https://github.com/dasunpubudumal/consul-kv-bootstrapper/actions/workflows/maven.yml)
 
+[![](https://jitpack.io/v/dasunpubudumal/consul-kv-bootstrapper.svg)](https://jitpack.io/#dasunpubudumal/consul-kv-bootstrapper)
+
+[![](https://img.shields.io/github/license/dasunpubudumal/consul-kv-bootstrapper)
+
+[![](https://img.shields.io/github/issues/dasunpubudumal/consul-kv-bootstrapper)
+
+[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/dasunpubudumal/consul-kv-bootstrapper/graphs/commit-activity)
+
+[![GitHub release](https://img.shields.io/github/release/Naereen/StrapDown.js.svg)](https://github.com/dasunpubudumal/consul-kv-bootstrapper/releases/)
+
 Applications use different variables (e.g. connector hosts, ports, application-specific environment values)
 for the tasks they accomplish. Most applications require these parameters at startup, where the application is
 initialized with the configurations as global constants which are used at runtime. [Consul KV](https://www.consul.io/docs/dynamic-app-config/kv) is such a Key-Value store
