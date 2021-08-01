@@ -61,7 +61,7 @@ configurations:
 
 If it is required to fetch all configurations, remove `configurations` node from the `yml`.
 
-**Note**: Please add `io.realitix.*` in `@ComponentScan` as `@ComponentScan(basePackages = {"io.realitix.*", "<your base packages>.*"})` in your main `SpringBootApplication` so that the dependency components will get scanned. 
+**Note**: Please add `io.realitix.*` and `com.github.*` in `@ComponentScan` as `@ComponentScan(basePackages = {"io.realitix.*", "com.github.*", "<your base packages>.*"})` in your main `SpringBootApplication` so that the dependency components will get scanned. 
 
 ## Maven Dependency
 
