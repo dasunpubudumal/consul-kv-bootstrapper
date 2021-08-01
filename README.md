@@ -37,7 +37,15 @@ If it is required to set up the `consul-config.yml` file in JVM environment vari
 
 `FILE_PATH` you need to add to the JVM environments.
 
-Configuration file:
+## What does the annotation `ConsulKVBootstrapper` do?
+
+The annotation sends Consul agent a request and fetches key-values according to the 
+criteria that the user provides in the configuration file. Afterwards, it serializes those
+configurations into a `Properties` objects and injects into the method which is annotated with 
+`@ConsulKVBootstrapper`. **Note that the method annotated must take in `Properties` object as an argument**.
+
+
+## Configuration file
 
 ```yaml
 consulHost: localhost
