@@ -73,6 +73,7 @@
             <version>22.0</version>
         </dependency>
     </dependencies>
+    <!--  Github Packaging Distro  -->
     <distributionManagement>
         <repository>
             <id>github</id>
