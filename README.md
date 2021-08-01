@@ -1,16 +1,6 @@
 # Consul KV Configuration Bootstrapper
 
-[![Java CI with Maven](https://github.com/dasunpubudumal/consul-kv-bootstrapper/actions/workflows/maven.yml/badge.svg?branch=master)](https://github.com/dasunpubudumal/consul-kv-bootstrapper/actions/workflows/maven.yml)
-
-![](https://jitpack.io/v/dasunpubudumal/consul-kv-bootstrapper.svg)
-
-![](https://img.shields.io/github/license/dasunpubudumal/consul-kv-bootstrapper)
-
-![](https://img.shields.io/github/issues/dasunpubudumal/consul-kv-bootstrapper)
-
-![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)
-
-[![GitHub release](https://img.shields.io/github/release/Naereen/StrapDown.js.svg)](https://github.com/dasunpubudumal/consul-kv-bootstrapper/releases/)
+[![Java CI with Maven](https://github.com/dasunpubudumal/consul-kv-bootstrapper/actions/workflows/maven.yml/badge.svg?branch=master)](https://github.com/dasunpubudumal/consul-kv-bootstrapper/actions/workflows/maven.yml) ![](https://jitpack.io/v/dasunpubudumal/consul-kv-bootstrapper.svg) ![](https://img.shields.io/github/license/dasunpubudumal/consul-kv-bootstrapper) ![](https://img.shields.io/github/issues/dasunpubudumal/consul-kv-bootstrapper) ![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)
 
 
 Applications use different variables (e.g. connector hosts, ports, application-specific environment values)
