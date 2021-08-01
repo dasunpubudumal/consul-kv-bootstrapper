@@ -10,7 +10,8 @@
 
 ![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)
 
-![GitHub release](https://img.shields.io/github/release/Naereen/StrapDown.js.svg)
+[![GitHub release](https://img.shields.io/github/release/Naereen/StrapDown.js.svg)](https://github.com/dasunpubudumal/consul-kv-bootstrapper/releases/)
+
 
 Applications use different variables (e.g. connector hosts, ports, application-specific environment values)
 for the tasks they accomplish. Most applications require these parameters at startup, where the application is
