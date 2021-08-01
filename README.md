@@ -67,18 +67,19 @@ If it is required to fetch all configurations, remove `configurations` node from
 
 ```xml
 <dependency>
-    <groupId>io.realitix</groupId>
+    <groupId>com.github.dasunpubudumal</groupId>
     <artifactId>consul-kv-bootstrapper</artifactId>
-    <version>1.4.0-alpha</version>
+    <version>v1.4</version>
 </dependency>
 ```
 
 Add following to `<repositories>`.
 
 ```xml
-<repository>
-    <id>github</id>
-    <name>GitHub Packages</name>
-    <url>https://maven.pkg.github.com/dasunpubudumal/consul-kv-bootstrapper</url>
-</repository>
+<repositories>
+    <repository>
+        <id>jitpack.io</id>
+        <url>https://jitpack.io</url>
+    </repository>
+</repositories>
 ```
