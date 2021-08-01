@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>io.realitix</groupId>
     <artifactId>consul-kv-bootstrapper</artifactId>
-    <version>1.0.0-alpha</version>
+    <version>1.4.0-alpha</version>
     <name>consul-kv-bootstrapper</name>
     <properties>
         <java.version>11</java.version>
