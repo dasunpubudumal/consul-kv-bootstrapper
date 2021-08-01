@@ -1,6 +1,6 @@
 # Consul KV Configuration Bootstrapper
 
-[![Java CI with Maven](https://github.com/dasunpubudumal/consul-kv-bootstrapper/actions/workflows/maven.yml/badge.svg)](https://github.com/dasunpubudumal/consul-kv-bootstrapper/actions/workflows/maven.yml)
+[![Java CI with Maven](https://github.com/dasunpubudumal/consul-kv-bootstrapper/actions/workflows/maven.yml/badge.svg?branch=master)](https://github.com/dasunpubudumal/consul-kv-bootstrapper/actions/workflows/maven.yml)
 
 Applications use different variables (e.g. connector hosts, ports, application-specific environment values)
 for the tasks they accomplish. Most applications require these parameters at startup, where the application is
