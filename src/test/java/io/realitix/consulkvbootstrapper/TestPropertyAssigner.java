@@ -13,6 +13,7 @@ import org.springframework.test.context.junit.jupiter.SpringExtension;
 
 import java.util.Properties;
 
+@Disabled
 @ExtendWith(SpringExtension.class)
 @AutoConfigureMockMvc
 public class TestPropertyAssigner {
