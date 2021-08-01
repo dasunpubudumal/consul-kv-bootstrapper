@@ -9,7 +9,7 @@ initialized with the configurations as global constants which are used at runtim
 for storing said configurations.
 
 This application is a utility application to bootstrap application configurations held 
-in Consul KV upon client application initialization. Upon initialization of a Spring Bean (`@Bean, @Component`, etc.) use `@BootstrapperMethod` to return properties declared in a `consul-config.yml` file. 
+in Consul KV upon client application initialization. Upon initialization of a Spring Bean (`@Bean, @Component`, etc.) use `@ConsulKVBootstrapper` to return properties declared in a `consul-config.yml` file. 
 
 ```java
 @Configuration
