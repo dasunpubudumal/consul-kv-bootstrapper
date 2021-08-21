@@ -2,6 +2,6 @@ message: "If you use this software, please cite it as below."
 authors:
   - family-names: Pubudumal
     given-names: Dasun
-title: "My Research Software"
+title: "Consul KV Bootstrapper"
 version: 1.0.0
 date-released: 2021-08-11
