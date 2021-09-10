@@ -18,11 +18,11 @@ public static class TestConfig {
     @Autowired
     static Properties properties;
 
-    @ConsulKVBootstrapper(configFilePath = "src/test/resources/consul-config.yml")
+    @ConsulKVBootstrapper(configFilePath = "{FILE_PATH}")
     @Bean
     Properties properties( Properties properties )
     {
-        this.properties = properties;
+        TestConfig.properties = properties;
         return properties;
     }
 
